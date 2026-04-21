@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                             http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    
+    <display-name>Employee Clock In/Out System</display-name>
+    
+    <!-- Login Servlet -->
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.jibble.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+    
+    <!-- Signup Servlet -->
+    <servlet>
+        <servlet-name>SignupServlet</servlet-name>
+        <servlet-class>com.jibble.SignupServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SignupServlet</servlet-name>
+        <url-pattern>/signup</url-pattern>
+    </servlet-mapping>
+        <!-- Leave Requests Servlet (Dedicated Page) -->
+    <servlet>
+        <servlet-name>LeaveRequestsServlet</servlet-name>
+        <servlet-class>com.jibble.LeaveRequestsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LeaveRequestsServlet</servlet-name>
+        <url-pattern>/leave-requests</url-pattern>
+    </servlet-mapping>
+        <!-- Dashboard Servlet -->
+    <servlet>
+        <servlet-name>DashboardServlet</servlet-name>
+        <servlet-class>com.jibble.DashboardServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DashboardServlet</servlet-name>
+        <url-pattern>/dashboard</url-pattern>
+    </servlet-mapping>
+    
+    <!-- Logout Servlet -->
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>com.jibble.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+    
+    <!-- Clock In Servlet -->
+    <servlet>
+        <servlet-name>ClockInServlet</servlet-name>
+        <servlet-class>com.jibble.ClockInServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ClockInServlet</servlet-name>
+        <url-pattern>/clockin</url-pattern>
+    </servlet-mapping>
+    
+    <!-- Clock Out Servlet -->
+    <servlet>
+        <servlet-name>ClockOutServlet</servlet-name>
+        <servlet-class>com.jibble.ClockOutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ClockOutServlet</servlet-name>
+        <url-pattern>/clockout</url-pattern>
+    </servlet-mapping>
+    
+    <!-- Leave Request Servlet -->
+    <servlet>
+        <servlet-name>LeaveServlet</servlet-name>
+        <servlet-class>com.jibble.LeaveServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LeaveServlet</servlet-name>
+        <url-pattern>/leave</url-pattern>
+    </servlet-mapping>
+    
+    <!-- Cancel Leave Servlet -->
+    <servlet>
+        <servlet-name>CancelLeaveServlet</servlet-name>
+        <servlet-class>com.jibble.CancelLeaveServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CancelLeaveServlet</servlet-name>
+        <url-pattern>/cancelleave</url-pattern>
+    </servlet-mapping>
+    
+    <welcome-file-list>
+        <welcome-file>login.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
